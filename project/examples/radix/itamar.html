@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Radix</title>  
+        <style>
+        	#paper{
+        		background:#FFF;
+        	}
+        </style>                   
+    </head>
+    <body>    	    
+        <div id="paper"></div>
+                                      
+        <script src="../../build/astrochart.js"></script>
+        <script type="text/javascript"> 
+        
+        	var data = {
+				"planets":{	
+					"Sun":[97.39],
+					"Moon":[307.27],
+					"Mercury":[120.56],
+					"Venus":[80.08],
+					"Mars":[120.25],
+					"Jupiter":[272.52],
+					"Saturn":[73.39],
+					"Uranus":[194.13],
+					"Neptune":[243],
+					"Pluto":[179.25]
+				},
+				"cusps":[82, 111, 141, 173, 205, 235, 262, 291, 321, 353, 25, 55]			
+			};
+
+			var settings = {COLOR_ARIES : "#F07778",
+                          COLOR_TAURUS : "#F39C57",
+                          COLOR_GEMINI: "#FCC859",
+                          COLOR_CANCER : "#FCE558", 
+                          COLOR_LEO : "#FFFF82", 
+                          COLOR_VIRGO : "#D3FF82", 
+                          COLOR_LIBRA : "#65FF65",  
+                          COLOR_SCORPIO : "#64FDB1",  
+                          COLOR_SAGITTARIUS : "#7ED2F8",
+                          COLOR_CAPRICORN : "#A0A0FD", 
+                          COLOR_AQUARIUS : "#D9B9FD", 
+                          COLOR_PISCES : "#F8B5FE",
+
+
+			/*	
+			var settings = {COLOR_ARIES : "#FF5050",
+                          COLOR_TAURUS : "#99FF99",
+                          COLOR_GEMINI: "#FFFF99",
+                          COLOR_CANCER : "#66FFFF", 
+                          COLOR_LEO : "#FF5050", 
+                          COLOR_VIRGO : "#99FF99", 
+                          COLOR_LIBRA : "#FFFF99",  
+                          COLOR_SCORPIO : "#66FFFF",  
+                          COLOR_SAGITTARIUS : "#FF5050",
+                          COLOR_CAPRICORN : "#99FF99", 
+                          COLOR_AQUARIUS : "#FFFF99", 
+                          COLOR_PISCES : "#66FFFF",
+			*/			
+						  ASPECTS : { 
+							"conjunction":{"degree":0, "orbit":10, "color":"#0000FF"}, 
+							"sextil":{"degree":60, "orbit":8, "color":"#0000FF"}, 
+							"square":{"degree":90, "orbit":8, "color":"#FF0000"}, 
+							"trine":{"degree":120, "orbit":8, "color":"#0000FF"},
+							"opposition":{"degree":180, "orbit":10, "color":"#FF0000"}
+						  },
+						  
+						  SYMBOL_SCALE: 1.0003,
+						  POINTS_TEXT_SIZE: 12,
+						  //RULER_RADIUS: 4,
+						  //SYMBOL_AXIS_STROKE : 2,
+						  DEBUG: true,
+						
+						};
+												      
+        	window.onload = function () {            	     
+				var radix = new astrology.Chart('paper', 800, 800, settings).radix( data );
+								
+				// Aspect calculation
+				// default is planet to planet, but it is possible add some important points:				
+				radix.addPointsOfInterest( {"As":[data.cusps[0]],"Ic":[data.cusps[3]],"Ds":[data.cusps[6]],"Mc":[data.cusps[9]]});				
+				radix.aspects();																								
+			};
+		</script>		    
+    </body>
+</html>
+
