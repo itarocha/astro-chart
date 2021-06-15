@@ -66,6 +66,7 @@ module.exports = function( grunt ) {
   		"watch"
 	]);	
 	grunt.registerTask('dev', ['jshint', 'concat']);
-	grunt.registerTask('build', ['concat', 'uglify', 'qunit']);
+	grunt.registerTask('build', ['concat', 'uglify']);
+	//grunt.registerTask('build', ['concat', 'uglify', 'qunit']);
 	grunt.registerTask('test', ['qunit']);	
 };

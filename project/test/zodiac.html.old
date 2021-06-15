@@ -69,7 +69,7 @@
 					
 					equal( reporter.getHouseNumber( 26.87 ), 4 );																																				
 				});
-				
+				/*
 				test( "dignities - Sun", function( ) {
 					
 					var cusps = [0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330];
@@ -214,7 +214,7 @@
 					deepEqual( reporter.getDignities( {name:"Pluto", position:0} ), [astrology.DIGNITIES_EXALTATION] );
 					deepEqual( reporter.getDignities( {name:"Pluto", position:18}, [{"name":"Pluto", "position":18, "orbit":2}] ), [astrology.DIGNITIES_EXALTATION, astrology.DIGNITIES_EXACT_EXALTATION] );																																					
 				});
-				
+				*/
 				test( "toDMS", function( ) {					
 					var cusps = [0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330];
 					var zodiac = new astrology.Zodiac( cusps  );							

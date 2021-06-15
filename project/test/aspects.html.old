@@ -8,7 +8,7 @@
 		<script type="text/javascript" src="../build/astrochart.js"></script>	
 		
 		<script>
-			window.onload = function( ) {							
+			window.onload = function() {							
 				test( "radix", function( ) {										
 					
 					var toPoints = {

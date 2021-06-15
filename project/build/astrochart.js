@@ -1947,7 +1947,7 @@
         	        	        	        
         	// draw point descriptions
 			var grau = (Math.round(this.data.planets[point.name][0]) % 30);
-        	var textsToShow = [grau.toString()+"°."];
+        	var textsToShow = [grau.toString()+"°"];
 			//textsToShow = textsToShow.concat("°");
         	
         	var zodiac = new astrology.Zodiac(this.data.cusps);

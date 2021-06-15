@@ -9,8 +9,6 @@
 		
 		<script>
 			window.onload = function( ) {							
-				
-				
 				test( "validate", function( ) {
 					 var chart = new astrology.Chart( 'paper2', 1, 1);					
 					 throws( function(){ chart.radix() }, "Must throw error to pass.");
@@ -19,14 +17,6 @@
 					 throws( function(){ chart.radix({planets:{}, cusps:[1,2,3]}) }, "Must throw error to pass.");					 
 					 throws( function(){ chart.radix({planets:{Moon:0, Sun:30}, cusps:[1,2,3,4,5,6,7,8,9,10,11,12]})}, "Must throw error to pass.");
 				});
-				
-				
-									
-				
-				
-				
-				
-																				
 			};// onload
 		</script>
 	</head>
