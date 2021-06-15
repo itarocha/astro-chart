@@ -157,7 +157,7 @@
         	        	        	        
         	// draw point descriptions
 			var grau = (Math.round(this.data.planets[point.name][0]) % 30);
-        	var textsToShow = [grau.toString()+"°"];
+        	var textsToShow = [grau.toString()];
 			//textsToShow = textsToShow.concat("°");
         	
         	var zodiac = new astrology.Zodiac(this.data.cusps);
@@ -165,7 +165,7 @@
         	if(this.data.planets[point.name][1] && zodiac.isRetrograde(this.data.planets[point.name][1])){
         		textsToShow.push("R");
         	}else{
-        		textsToShow.push("aaa");
+        		textsToShow.push("");
         	}
         	////////////textsToShow = textsToShow.concat(zodiac.getDignities({"name":point.name, "position":this.data.planets[point.name][0]}, astrology.DIGNITIES_EXACT_EXALTATION_DEFAULT).join(","));        	
         	        	        	        	        	        	      	        	         	        	        	      
